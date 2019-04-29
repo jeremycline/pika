@@ -1146,8 +1146,8 @@ class _TwistedConnectionAdapter(pika.connection.Connection):
 
 class TwistedProtocolConnection(protocol.Protocol):
     """A Pika-specific implementation of a Twisted Protocol. Allows using
-    Twisted's non-blocking connectTCP/connectSSL methods for connecting to the
-    server.
+    Twisted's endpoints API or non-blocking connectTCP/connectSSL methods for
+    connecting to the server.
 
     TwistedProtocolConnection objects have a `ready` instance variable that's a
     Deferred which fires when the connection is ready to be used (the initial
